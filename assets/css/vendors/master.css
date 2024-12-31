@@ -1,0 +1,483 @@
+/*
+!<=======================================================>
+!<==================[ MAIN CONDITIONS ]==================>
+!<=======================================================>
+*/
+:root {
+    /* => COLORS */
+    --c-main: #0f3d3e;
+    --c-gray-1: #f7f7f7;
+    --c-gray-2: #111111;
+    --c-gray-3: #141414;
+    --c-gray-4: #171717;
+    --c-gray-5: #6b6b6b;
+    --c-light: white;
+    /* => -*-*- */
+    --dropdown-bg: rgb(255, 255, 255);
+    --c-white-50: rgba(255, 255, 255, 0.5);
+    --transition: 0.3s;
+    --radius: 5px;
+    --nav-height: 55px;
+    --border-top: 5px 5px 0 0;
+    --border-right: 0 5px 5px 0;
+    --border-bottom: 0 0 5px 5px;
+    --border-left: 5px 0 0 5px;
+    /* --border-shadow: 1px solid rgba(0, 0, 0, 0.05); */
+    --dark-box-shadow: 0 0 40px 0 rgb(0 0 0 / 6%);
+    --dark-box-shadow2:
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        0px 3px 4px 0px hsla(0, 0%, 0%, 0.14),
+        0px 3px 3px -2px hsla(0, 0%, 0%, 0.12), 0px 1px 8px 0px hsla(0, 0%, 0%, 0.2);
+    --linear: linear-gradient(45deg, #039914, #b5f44f);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    outline: navajowhite;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+figure,
+.table,
+.form-row {
+    margin: 0;
+}
+
+textarea {
+    font-family: inherit;
+    resize: none;
+}
+
+input,
+button {
+    color: inherit;
+    font-size: inherit;
+    background-color: inherit;
+}
+
+hr {
+    height: 1px;
+    margin: 8px 0;
+    background-color: rgb(240, 240, 240);
+}
+
+img[fit] {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+img[shadow] {
+    opacity: .06;
+    -webkit-filter: grayscale(100%) invert(100%);
+            filter: grayscale(100%) invert(100%);
+}
+
+body.non-select {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+/*
+!<=======================================================>
+!<=====================[ CONTAINER ]=====================>
+!<=======================================================>
+*/
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*
+  !<=======================================================>
+  !<=======================[ FONTS ]=======================>
+  !<=======================================================>
+  */
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+/*
+  !<=======================================================>
+  !<======================[ CURSORS ]======================>
+  !<=======================================================>
+  */
+.pointer {
+    cursor: pointer;
+}
+
+/*
+  !<=======================================================>
+  !<=====================[ SCROLLBAR ]=====================>
+  !<=======================================================>
+  */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #aaa;
+}
+
+/*
+  !<=======================================================>
+  !<=====================[ POSITIONS ]=====================>
+  !<=======================================================>
+  */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.static {
+    position: static;
+}
+
+/*
+  !<=======================================================>
+  !<======================[ DISPLAY ]======================>
+  !<=======================================================>
+  */
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+/*
+  !<=======================================================>
+  !<======================[ FLEXBOX ]======================>
+  !<=======================================================>
+  */
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+/*
+  !<=======================================================>
+  !<======================[ OVERFLOW ]======================>
+  !<=======================================================>
+  */
+.o-auto {
+    overflow: auto;
+}
+
+/*
+  !<=======================================================>
+  !<======================[ HEIGHTS ]======================>
+  !<=======================================================>
+  */
+.h-100 {
+    height: 100%;
+}
+
+/*
+  !<=======================================================>
+  !<======================[ WIDTHS ]======================>
+  !<=======================================================>
+  */
+.w-fit {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+/*
+  !<======================[ MARGIN ]======================>
+  ? - auto, 20
+  !<======================[ MARGIN ]======================>
+  */
+/** <================= [ MARGIN auto ] =================> */
+.m-auto {
+    margin: auto;
+}
+
+.m-auto-t {
+    margin-top: auto;
+}
+
+.m-auto-r {
+    margin-right: auto;
+}
+
+.m-auto-b {
+    margin-bottom: auto;
+}
+
+.m-auto-l {
+    margin-left: auto;
+}
+
+.m-auto-h {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.m-auto-v {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/** <================= [ MARGIN 20 ] =================> */
+.m-20 {
+    margin: 20px;
+}
+
+.m-20-t {
+    margin-top: 20px;
+}
+
+.m-20-r {
+    margin-right: 20px;
+}
+
+.m-20-b {
+    margin-bottom: 20px;
+}
+
+.m-20-l {
+    margin-left: 20px;
+}
+
+.m-20-h {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.m-20-v {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*
+  !<======================[ PADDING ]======================>
+  ? - auto, 15, 20, 50
+  !<======================[ PADDING ]======================>
+  */
+/** <================= [ PADDING auto ] =================> */
+.p-auto {
+    padding: auto;
+}
+
+.p-auto-t {
+    padding-top: auto;
+}
+
+.p-auto-r {
+    padding-right: auto;
+}
+
+.p-auto-b {
+    padding-bottom: auto;
+}
+
+.p-auto-l {
+    padding-left: auto;
+}
+
+.p-auto-h {
+    padding-right: auto;
+    padding-left: auto;
+}
+
+.p-auto-v {
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+/** <================= [ PADDING 15 ] =================> */
+.p-15 {
+    padding: 15px;
+}
+
+.p-15-t {
+    padding-top: 15px;
+}
+
+.p-15-r {
+    padding-right: 15px;
+}
+
+.p-15-b {
+    padding-bottom: 15px;
+}
+
+.p-15-l {
+    padding-left: 15px;
+}
+
+.p-15-h {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.p-15-v {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/** <================= [ PADDING 20 ] =================> */
+.p-20 {
+    padding: 20px;
+}
+
+.p-20-t {
+    padding-top: 20px;
+}
+
+.p-20-r {
+    padding-right: 20px;
+}
+
+.p-20-b {
+    padding-bottom: 20px;
+}
+
+.p-20-l {
+    padding-left: 20px;
+}
+
+.p-20-h {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.p-20-v {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/** <================= [ PADDING 50 ] =================> */
+.p-50 {
+    padding: 50px;
+}
+
+.p-50-t {
+    padding-top: 50px;
+}
+
+.p-50-r {
+    padding-right: 50px;
+}
+
+.p-50-b {
+    padding-bottom: 50px;
+}
+
+.p-50-l {
+    padding-left: 50px;
+}
+
+.p-50-h {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.p-50-v {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
