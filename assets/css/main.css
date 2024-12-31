@@ -460,7 +460,7 @@ body {
 }
 
 .slider-item-link[disabled] {
-    cursor: default;
+    pointer-events: none;
     opacity: .8;
 }
 
