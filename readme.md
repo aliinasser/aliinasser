@@ -9,12 +9,12 @@ I am a student, I started to fall in love with technology, This love has helped 
 [![My Skills](https://skillicons.dev/icons?i=html,css,sass,bootstrap,js)](https://skillicons.dev)
 
 > <p><strong>Backend Languages</strong></p>
-[![My Skills](https://skillicons.dev/icons?i=firebase,php,mysql)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=php,laravel,mysql,firebase)](https://skillicons.dev)
 
 > <p><strong>Other Skills</strong></p>
-[![My Skills](https://skillicons.dev/icons?i=git)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=git,github)](https://skillicons.dev)
 
 ## What I want to do next :thinking:
-- Backend Development (to become a Full-Stack developer)
+- ~~Backend Development (to become a Full-Stack developer)~~
 - At least delve into **AI** and **ML**.
 - Unlock the secret to the universe :rofl:
